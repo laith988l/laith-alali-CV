@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="st.css">
+  <script src="jv.js"></script>
+  <title>Laith Alali</title>
+<link rel="icon" href="gall/logo s second with black.png" type="image/png" sizes="64x64">
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Brand على اليسار -->
+      <a class="navbar-brand" href="index.html">Laith Alali</a>
+
+      <!-- زر التوجل -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- الروابط على اليمين -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="Resume.html">My Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="Experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <p class="Name">I am Laith Alali</p>
+    <p class="description" > Hello my friends, <br> here you can find my projects, skills, and all you need to know about me.<BR> Have a nice time! </p>
+    </p>
+   <button class="hero-button" onclick="location.href='Resume.html'">Discover</button>
+
+  <div id="title"></div>
+  </section>
+
+
+
+  <script>
+    // Generate 200 stars randomly
+ const starCount = 300;
+for(let i = 0; i < starCount; i++){
+  const star = document.createElement('div');
+  star.className = 'star';
+
+  // موقع عشوائي على المحور X
+  star.style.left = Math.random() * window.innerWidth + 'px';
+
+  // تأخير عشوائي لبداية الحركة لتكون متواصلة
+  const delay = Math.random() * 10; // ثواني
+  star.style.animationDelay = delay + 's';
+
+  // حجم عشوائي
+  const size = Math.random() * 3 + 1;
+  star.style.width = star.style.height = size + 'px';
+
+  // سرعة مختلفة لكل نجم (أسرع)
+  const duration = Math.random() * 5 + 5; // بين 5 و 10 ثواني
+  star.style.animationDuration = duration + 's';
+
+  // لون أبيض شفاف متغير قليلاً
+  star.style.opacity = Math.random() * 0.7 + 0.3;
+
+  document.body.appendChild(star);
+}
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,433 @@
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #040509 0%, #04060A 58%, #04090D 100%);
+  backdrop-filter: blur(2px);
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0.5rem 1rem;
+}
+
+/* Brand */
+.navbar .navbar-brand {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  margin-right: 2rem;
+}
+
+/* Links */
+.navbar .nav-item .nav-link {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+/* Toggler */
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-toggler,
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+   overflow-x: hidden; /* يمنع سكرول جانبي بس */
+  overflow-y: auto;
+}
+
+section {
+  min-height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 20px;
+}
+
+/* خلفيات */
+.Resume { 
+  background: linear-gradient(90deg, #040509 0%, #04060A 58%, #04090D 100%);
+  backdrop-filter: blur(2px);
+}
+.about { background: #222; color: white; }
+.services { background: #f5f5f5; color: #333; }
+.contact { background: #111; color: white; }
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+} 
+
+nav .logo { color: white; font-size: 1.5rem; font-weight: bold; }
+nav ul { list-style: none; display: flex; gap: 30px; }
+nav ul li a { color: white; text-decoration: none; transition: 0.3s; }
+nav ul li a:hover { color: #feca57; }
+
+h1 {  color :#0f5132 ;font-size: 2.5rem; margin-bottom: 20px; text-align: center; }
+p { color: #ffffff ; max-width: 800px; text-align: center; font-size: 1.2rem; }
+.uk-card-title2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #EB5E28;
+}
+.uk-label-danger
+{
+color: #252422;
+
+}
+.uk-label-warning{
+  color: #252422;
+}
+.uk-card-title1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #EB5E28;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  nav { padding: 15px 20px; }
+  nav ul { gap: 15px; }
+  .services-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 2rem; }
+  p { font-size: 1rem; }
+}
+
+.about-resume {
+  display: flex;
+  flex-direction: column;   /* يخلي العناصر فوق بعض */
+  justify-content: center;  /* يوسّط عمودي */
+  align-items: center;      /* يوسّط أفقي */
+  gap: 20px;                /* مسافة بين الصورة والزر */
+  max-width: 1000px;
+  margin: auto;             /* يخلي البلوك بالنص */
+}
+
+.about-resume img {
+  width: 250px;             /* حجم الصورة */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* في الموبايل نخلي الصورة فوق النص */
+@media (max-width: 768px) {
+  .about-resume {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-resume img {
+    width: 100%;
+    margin-right: 0; /* إلغاء المسافة */
+  }
+}
+
+/* Resume button */
+.Resume-button {
+  display: inline-block;
+  width: clamp(300, 30%, 350px);
+  background: linear-gradient(45deg, #302f2f, #e9e8e8);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 15px #0f5132;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.Resume-button:hover {
+  transform: translateY(-0.5px);
+  box-shadow: 0 8px 20px rgba(220, 216, 217, 0.6);
+}
+
+.Resume-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 2px;
+  background: linear-gradient(90deg, #00ff88, #00ccff, #ff0099, #ffcc00, #00ff88);
+  background-size: 400%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.Resume-button.loading::before {
+  opacity: 1;
+  animation: borderMove 2s linear infinite;
+}
+
+.Resume-button.done::before {
+  opacity: 1;
+  background: linear-gradient(90deg, #00ff00, #00ff00);
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+
+/* الحاوية الرئيسية */
+.timeline-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 165px 20px;
+  gap: 40px; /* مسافة بين الكروت */
+}
+
+/* الخط العمودي */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 166px;
+  bottom: 0;
+  width: 2px;
+  background: #ffffff;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* كل كارد */
+.timeline-card {
+  min-height: 250px;   /* 🔹 كرت أصغر */
+     width: 100%;      /* الكارد ياخد عرض الشاشة كامل */
+  max-width: 100%;
+    border-radius: 12px;
+     background: linear-gradient(45deg, #302f2f, #e9e8e8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* عنوان وليبل */
+.uk-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.uk-label {
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    padding: 20px;
+  }
+  .timeline-card {
+    width: 90vw; /* عرض الكارد في الموبايل */
+  }
+}
+
+
+.container {
+  left: -14px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+
+.spam.skill1 {
+      color: rgb(17, 17, 16);
+    font-size: x-large;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+.software-logos {
+  display: flex;
+  justify-content: center; /* تصفيف في الوسط */
+  gap: 15px; /* المسافة بين كل أيقونة */
+  flex-wrap: wrap; /* للعرض على الشاشات الصغيرة */
+  margin: -5px 0;
+}
+
+.software-logos img {
+  width: 40px; /* حجم الأيقونات */
+  height: 40px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.software-logos img:hover {
+  transform: scale(1.2); /* تكبير الأيقونة عند التحويم */
+}
+
+
+
+ .languages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 24px;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .languages div {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .levels {
+    margin-top: -16px;
+    top: 10px;
+    display: grid
+;
+    grid-template-columns: repeat(3, 2fr);
+    text-align: center;
+    gap: 33px;
+    margin-bottom: 26px;
+    font-size: 17px;
+    color: #333
+  }
+
+  .personal-info {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .info-box {
+    background: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .info-box span {
+    margin-left: 8px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+
+
+
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+

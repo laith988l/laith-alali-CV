@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="st6.css">
+    <link rel="stylesheet" href="st2.css">
+   <title>My Resume</title>
+<link rel="icon" href="gall/logo s second with black.png" type="image/png" sizes="64x64">
+</head>
+
+<body>
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Brand على اليسار -->
+      <a class="navbar-brand" href="index.html">Laith Alali</a>
+
+      <!-- زر التوجل -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- الروابط على اليمين -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="Resume.html">My Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="Experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero -->
+  <section id="Resume" class="Resume">
+  <div id="About-resume" class="about-resume">
+  <img  src="https://raw.githubusercontent.com/laith988l/image/main/_MG_9270%20copy.jpg" alt="Laith Alali">
+  <button class="Resume-button">Download My Resume</button>
+
+
+  <div class="container">
+  <div class="chevron"></div>
+  <div class="chevron"></div>
+  <div class="chevron"></div>
+  <span class="text">Scroll down</span>
+
+    </div>     
+
+
+ 
+
+ 
+<div class="timeline-container">
+
+  <div class="uk-card timeline-card">
+    <h1 class="uk-card-title1">Education</h1>
+    <span class="uk-label uk-label-success">2018 - 2023</span>
+    <p>Yarmouk University <br>
+Hijjawi Faculty for Engineering Technology ‘<br>
+Bachelor of  Computer Engineering<br> </p>
+  </div>
+
+  <div class="uk-card timeline-card">
+    <h1 class="uk-card-title2">Experience</h1>
+    <span class="uk-label uk-label-warning">Oct 2023 - Jun 2024</span>
+    <p>Marketing and Social Media Specialist<br>
+Designed ads and edited videos using Adobe Suite 
+and Figma . <br>
+Managed and created content for social media pages.<br>
+Al Yamama Co for Health & Environmental Projects <br>
+Amman, Jordan</p>
+  </div>
+
+  <div class="uk-card timeline-card">
+    <span class="uk-label uk-label-danger">Oct 2023 – Dec 2023</span>
+    <p>ASP.NET MVC<br>
+Enrolled in an ASP.NET MVC course to enhance web <br> development skills and stay updated with modern <br> frameworks, showing commitment to continuous learning.<br>
+The Hope International<br>
+Amman, Jordan</p>
+  </div>
+          
+
+
+ <div class="uk-card timeline-card">
+    <span class="uk-label uk-label-danger">Apr 2023 - Sep 2023</span>
+    <p>Full Stack DeveloperC<br>
+Completed a Full Stack Developer trainee program,<br> gaining hands-on experience with SQL, HTML, CSS, JavaScript, Bootstrap,<br> and the MVC framework <br>	Trained in Agile methodology with Scrum, improving teamwork, time management, and task prioritization.<br> Acquired solid understanding of both front-end and back-end development..<br>
+Tahaluf Al Emarat Technical Solutions<br>
+Amman, Jordan</p>
+  </div>
+
+
+
+<div class="uk-card timeline-card">
+    <h1 class="uk-card-title1" >Technical Skills</h1>
+    <span class="uk-label uk-label-success spam.skill1" style="color: black; font-size: x-large;">Coding Skills</span>
+    <p class>HTML, CSS, JavaScript, Bootstrap, C++, SQL, Oracle</p>
+    <span class="uk-label uk-label-success" style="color: black; font-size: x-large;">Software Skills</span>
+    <p>
+      <div class="software-logos">
+  <img src="img/premiere-pro.png" alt="Premiere Pro">
+  <img src="img/illustrator.png" alt="Illustrator">
+  <img src="img/photoshop.png" alt="Photoshop">
+  <img src="img/xd.png" alt="Adobe XD">
+  <img src="img/after-effects.png" alt="After Effects">
+  <img src="img/figma.png" alt="Figma">
+</div>
+
+</div>
+
+<div class="uk-card timeline-card">
+    <h1 class="uk-card-title1" >Language</h1>
+      <div class="languages">
+    <div>English</div>
+    <div>Arabic</div>
+    <div>German</div>
+  </div>
+  <div class="levels">
+    <div>Fluent</div>
+    <div>Native</div>
+    <div>B1</div>
+  </div>
+    
+    <h1 class="uk-card-title1" >Pesronal Info</h1>
+  <div class="personal-info">
+    <div class="info-box">Syrian</div>
+    <div class="info-box"><span>10.06.1998</span></div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+</section>
+
+<script>
+const btn = document.querySelector(".Resume-button");
+
+btn.addEventListener("click", async () => {
+  btn.classList.add("loading");
+
+  try {
+    const response = await fetch("https://raw.githubusercontent.com/laith988l/image/main/laith%20cv.pdf");
+    const blob = await response.blob();
+
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Laith_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+
+    // خلص التحميل ✅
+    btn.classList.remove("loading");
+    btn.classList.add("done");
+    btn.textContent = "✅ Done";
+
+    setTimeout(() => {
+      btn.classList.remove("done");
+      btn.textContent = "Download My Resume";
+    }, 2000);
+
+  } catch (error) {
+    btn.classList.remove("loading");
+    btn.textContent = "❌ Failed";
+  }
+});
+
+  var mySwiper = new Swiper(".swiper", {
+    autoHeight: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    speed: 500,
+    direction: "horizontal",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar"
+    },
+    loop: false,
+    effect: "slide",
+    spaceBetween: 30,
+    on: {
+      init: function () {
+        $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+      },
+      slideChangeTransitionStart: function () {
+        $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+      }
+    }
+  });
+  $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+    mySwiper.slideTo($(this).index());
+    $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+    $(this).addClass("active");
+  });
+
+
+</script>
+
+
+</body>
+
+</html>
