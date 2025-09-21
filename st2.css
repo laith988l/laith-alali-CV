@@ -99,11 +99,12 @@ p { color: #ffffff ; max-width: 800px; text-align: center; font-size: 1.2rem; }
 }
 .uk-label-danger
 {
-color: #252422;
+  font-size: large;
+color:#feca57;
 
 }
-.uk-label-warning{
-  color: #252422;
+.uk-label-warning{ font-size: large;
+  color: #feca57;
 }
 .uk-card-title1 {
   font-size: 2.5rem;
@@ -126,7 +127,7 @@ color: #252422;
   align-items: center;      /* يوسّط أفقي */
   gap: 20px;                /* مسافة بين الصورة والزر */
   max-width: 1000px;
-  margin: auto;             /* يخلي البلوك بالنص */
+             /* يخلي البلوك بالنص */
 }
 
 .about-resume img {
@@ -254,6 +255,8 @@ color: #252422;
 }
 
 .uk-label {
+   font-size: large;
+color:#feca57;
   margin-top: 5px;
 }
 

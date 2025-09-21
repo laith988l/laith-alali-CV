@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Map</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { height: 100%; width: 100%; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // إنشاء الخريطة (تبدأ على الشرق الأوسط)
+    const map = L.map("map").setView([30, 30], 4);
+
+    // إضافة البلاطات
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: "&copy; OpenStreetMap contributors",
+    }).addTo(map);
+
+    // لما يضغط المستخدم على الخريطة
+    map.on("click", async function (e) {
+      const lat = e.latlng.lat;
+      const lon = e.latlng.lng;
+
+      // API مفتاحك هنا 👇
+      const apiKey = "4453bf1554df5d5af8e5f5916f0d1312";
+
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}&lang=ar`;
+
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        if (data.cod !== 200) {
+          alert("Error: " + data.message);
+          return;
+        }
+
+        const city = data.name || "موقع غير معروف";
+        const temp = data.main.temp;
+        const weather = data.weather[0].description;
+
+        L.popup()
+          .setLatLng(e.latlng)
+          .setContent(`🌍 ${city}<br>🌡️ ${temp}°C<br>☁️ ${weather}`)
+          .openOn(map);
+      } catch (err) {
+        console.error(err);
+        alert("فشل في جلب الطقس.");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -4,7 +4,8 @@
   backdrop-filter: blur(2px);
   box-shadow: none !important;
   border: none !important;
-  padding: 0.5rem 1rem; /* توحيد المسافة داخل navbar */
+  padding: 0.5rem 1rem;
+  /* توحيد المسافة داخل navbar */
 }
 
 /* Brand */
@@ -13,7 +14,8 @@
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
-  margin-right: 2rem; /* مسافة ثابتة من الروابط */
+  margin-right: 2rem;
+  /* مسافة ثابتة من الروابط */
 }
 
 /* Links */
@@ -22,7 +24,8 @@
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
-  margin-left: 1rem; /* مسافة ثابتة بين الروابط */
+  margin-left: 1rem;
+  /* مسافة ثابتة بين الروابط */
 }
 
 /* Toggler */
@@ -35,199 +38,293 @@
   outline: none;
   box-shadow: none;
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+nav .logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #feca57;
+}
+
+
+
+
+
 
 /* ----------------------------------------------------------------------------------------------- */
 
-    
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-      scroll-behavior: smooth;
-    }
-
-    section {
-      min-height: 93vh;   /* كل سكشن يغطي الشاشة أو أكثر */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 50px 20px;
-    }
-
-    /* خلفيات مختلفة لكل سكشن */
-    .hero { background: linear-gradient(90deg, #040509 0%, #04060A 58%, #04090D 100%);
-       backdrop-filter: blur(2px);
-       }
-    .about { background: #222; color: white; }
-    .services { background: #f5f5f5; color: #333; }
-    .contact { background: #111; color: white; }
 
 
-    .Name {
-      font-size: 3rem;
-      color: #ffffff;
-      margin-bottom: 20px;
-      font-family:'Times New Roman', Times, serif
-    }
-    .description {
-      font-size: 1.2rem;
-      color: #ccc;
-      max-width: 800px;
-      text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    #typewriter {
-  border-right: 2px solid #f21313; /* المؤشر */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 93vh;
+  /* كل سكشن يغطي الشاشة أو أكثر */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 20px;
+}
+
+/* خلفيات مختلفة لكل سكشن */
+.hero {
+  background: linear-gradient(90deg, #040509 0%, #04060A 58%, #04090D 100%);
+  backdrop-filter: blur(2px);
+}
+
+.about {
+  background: #222;
+  color: white;
+}
+
+.services {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.contact {
+  background: #111;
+  color: white;
+}
+
+
+.Name {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 800px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#typewriter {
+  border-right: 2px solid #f21313;
+  /* المؤشر */
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  min-width: 12ch; /* اعطيه عرض ثابت كافي لكل الكلمات */
-  height: 1.2em;   /* يثبت الارتفاع */
+  min-width: 12ch;
+  /* اعطيه عرض ثابت كافي لكل الكلمات */
+  height: 1.2em;
+  /* يثبت الارتفاع */
 }
+
 .hero-button {
- display: inline-block;
-    width: clamp(150px, 30%, 300px);  /* يتغير حسب حجم الشاشة */
-    background: linear-gradient(45deg, #302f2f, #e9e8e8);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: clamp(14px, 2vw, 18px);  /* حجم خط متغير */
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 1px 1px 15px #0f5132;
-    text-align: center;
+  display: inline-block;
+  width: clamp(150px, 30%, 300px);
+  /* يتغير حسب حجم الشاشة */
+  background: linear-gradient(45deg, #302f2f, #e9e8e8);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: clamp(14px, 2vw, 18px);
+  /* حجم خط متغير */
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 15px #0f5132;
+  text-align: center;
 }
+
 .hero-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(23, 111, 18, 0.6);
 }
+
 .hero-button:active {
-   transform: scale(0.95); /* يصغر الزر قليلاً */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: scale(0.95);
+  /* يصغر الزر قليلاً */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
   }
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      background-color: rgba(0,0,0,0.5);
-      z-index: 1000;
-    } 
-     nav .logo { color: white; font-size: 1.5rem; font-weight: bold; }
-    nav ul { list-style: none; display: flex; gap: 30px; }
-    nav ul li a { color: white; text-decoration: none; transition: 0.3s; }
-    nav ul li a:hover { color: #feca57; }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    h1 { font-size: 2.5rem; margin-bottom: 20px; text-align: center; }
-    p { max-width: 800px; text-align: center; font-size: 1.2rem; }
-
-    /* الخدمات (grid responsive) */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      width: 100%;
-      max-width: 1000px;
-      margin-top: 30px;
-    }
-    .service {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    /* ريسبونسف للشاشات الصغيرة */
-    @media (max-width: 768px) {
-      nav { padding: 15px 20px; }
-      nav ul { gap: 15px; }
-      .services-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 2rem; }
-      p { font-size: 1rem; }
-    }
-
-    .about-content {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      max-width: 1000px;
-    }
-
-    
-    .about-content img {
-      width: 400px;
-      max-width: 100%;   /* يخلي الصورة ما تطلع برة الشاشة */
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    .about-content p {
-      flex: 1;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    /* لما الشاشة تصغر (موبايل) نخلي الصورة فوق والنص تحت */
-    @media (max-width: 768px) {
-      .about-content {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-content img {
-        width: 100%;
-      }
-    }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
-     html, body {
-      height: 100%;
-      margin: 0;
-      background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-      overflow: hidden;
-      
-    }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-       .star {
-      position: absolute;
-      border-radius: 50%;
-      background: white;
-      opacity: 0.7;
-      animation-name: animStar;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
+p {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-    @keyframes animStar {
-      0% { transform: translateY(0) translateX(0); opacity: 0.7; }
-      50% { opacity: 1; }
-      100% { transform: translateY(-1200px) translateX(50px); opacity: 0.7; }
-    }
+/* الخدمات (grid responsive) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 30px;
+}
 
-    #title {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: 50px;
-      letter-spacing: 10px;
-      margin-top: -30px;
-    }
+.service {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ريسبونسف للشاشات الصغيرة */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.about-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  max-width: 1000px;
+}
+
+
+.about-content img {
+  width: 400px;
+  max-width: 100%;
+  /* يخلي الصورة ما تطلع برة الشاشة */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-content p {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* لما الشاشة تصغر (موبايل) نخلي الصورة فوق والنص تحت */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 100%;
+  }
+}
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.7;
+  animation-name: animStar;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animStar {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-1200px) translateX(50px);
+    opacity: 0.7;
+  }
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -30px;
+}
