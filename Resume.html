@@ -48,12 +48,13 @@
       <button class="Resume-button">Download My Resume</button>
 
 
-      <div class="container">
+      <div class="container1">
+        
         <div class="chevron"></div>
         <div class="chevron"></div>
         <div class="chevron"></div>
         <span class="text">Scroll down</span>
-
+       
       </div>
 
 
@@ -62,7 +63,7 @@
 
       <div class="timeline-container">
 
-        <div class="uk-card timeline-card">
+        <div id="education" class="uk-card timeline-card">
           <h1 class="uk-card-title1">Education</h1>
 
 
@@ -74,10 +75,22 @@
             Bachelor of Computer Engineering<br> </p>
         </div>
 
+       
+       
         <div class="uk-card timeline-card">
           <h1 class="uk-card-title2">Experience</h1>
 
-          <p>Al Yamama Co for Health & Environmental Projects <br>
+          
+  <p>Front-End Developer<br> <span class="uk-label uk-label-warning">React.js</span> </p>
+          <span class="uk-label uk-label-warning">Jun 2025 - Oct 2025</span>
+          <p>I have basic familiarity with React.js, including creating simple components and using props and state.<br>
+             I have some experience with React Hooks, React Router, and styling components with CSS.<br>
+             I am comfortable using VS Code and Git, and I am eager to further develop my skills in React.<br>
+        </div>
+
+           <div class="uk-card timeline-card">
+          <h1 class="uk-card-title2">Experience</h1>
+          <p>So Logic Co for Health & Environmental Projects <br>
             Amman - Jordan</p>
           <span class="uk-label uk-label-warning">Oct 2023 - Jun 2024</span>
           <p>Marketing and Social Media Specialist<br>
@@ -85,6 +98,8 @@
             and Figma . <br>
             Managed and created content for social media pages.<br>
         </div>
+        
+
 
         <div class="uk-card timeline-card">
           <p>The Hope International<br>
@@ -110,6 +125,8 @@
           </p>
         </div>
 
+
+      
 
 
         <div class="uk-card timeline-card">
@@ -229,7 +246,14 @@
       $(this).addClass("active");
     });
 
+document.addEventListener("DOMContentLoaded", () => {
+      const scrollContainer = document.querySelector(".container1");
+      const educationSection = document.getElementById("education");
 
+      scrollContainer.addEventListener("click", () => {
+        educationSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
   </script>
 
 

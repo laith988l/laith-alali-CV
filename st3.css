@@ -16,6 +16,24 @@
   margin-right: 2rem; /* مسافة ثابتة من الروابط */
 }
 
+.navbar .navbar-brand:hover {  
+     color:rgba(23, 111, 18, 0.9); /* 0.6 = 60% شفافية */
+   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+.navbar .nav-item .nav-link:hover {
+    color:rgba(23, 111, 18, 0.9); /* 0.6 = 60% شفافية */
+   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: all 0.3s ease; /* حركة ناعمة */
+  
+  /* مسافة ثابتة بين الروابط */
+}
 /* Links */
 .navbar .nav-item .nav-link {
   color: #ffffff;
@@ -349,8 +367,8 @@ h1 {
 /* Photo Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-  grid-auto-rows: 12.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+    grid-auto-rows: 12.5rem;
   grid-auto-flow: dense;
   gap: 0.75rem;
 }

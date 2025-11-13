@@ -16,6 +16,24 @@
   margin-right: 2rem;
 }
 
+.navbar .navbar-brand:hover {  
+     color:rgba(23, 111, 18, 0.9); /* 0.6 = 60% شفافية */
+   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+.navbar .nav-item .nav-link:hover {
+    color:rgba(23, 111, 18, 0.9); /* 0.6 = 60% شفافية */
+   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: all 0.3s ease; /* حركة ناعمة */
+  
+  /* مسافة ثابتة بين الروابط */
+}
 /* Links */
 .navbar .nav-item .nav-link {
   color: #ffffff;
@@ -270,11 +288,17 @@ color:#feca57;
 }
 
 
-.container {
+.container1 {
   left: -14px;
   position: relative;
   width: 24px;
-  height: 24px;
+  height: 130px;
+}
+.scroll-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .chevron {
