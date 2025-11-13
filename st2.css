@@ -5,6 +5,7 @@
   box-shadow: none !important;
   border: none !important;
   padding: 0.5rem 1rem;
+  /* توحيد المسافة داخل navbar */
 }
 
 /* Brand */
@@ -14,8 +15,8 @@
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
   margin-right: 2rem;
+  /* مسافة ثابتة من الروابط */
 }
-
 .navbar .navbar-brand:hover {  
      color:rgba(23, 111, 18, 0.9); /* 0.6 = 60% شفافية */
    font-size: 25px;
@@ -34,6 +35,7 @@
   
   /* مسافة ثابتة بين الروابط */
 }
+
 /* Links */
 .navbar .nav-item .nav-link {
   color: #ffffff;
@@ -41,7 +43,10 @@
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
   margin-left: 1rem;
+  /* مسافة ثابتة بين الروابط */
 }
+/* Links */
+
 
 /* Toggler */
 .navbar .navbar-toggler .navbar-toggler-icon {
@@ -53,6 +58,42 @@
   outline: none;
   box-shadow: none;
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+nav .logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #feca57;
+}
+
+
+
 
 * {
   margin: 0;
@@ -448,6 +489,24 @@ color:#feca57;
     color: #fff;
   }
 
+
+/* ترتيب الروابط عند فتح التوغل */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-direction: column; /* يجعل الروابط عمودية */
+    align-items: center; /* يوسّطهم في الوسط */
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: center; /* نصوص الروابط في الوسط */
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0; /* مسافة بين كل رابط وآخر */
+  }
+}
 
 
 

@@ -290,6 +290,9 @@ p {
   line-height: 1.6;
 }
 
+
+
+
 /* لما الشاشة تصغر (موبايل) نخلي الصورة فوق والنص تحت */
 @media (max-width: 768px) {
   .about-content {

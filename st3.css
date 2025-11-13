@@ -588,3 +588,21 @@ h1 {
 
 
 }
+
+/* ترتيب الروابط عند فتح التوغل */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-direction: column; /* يجعل الروابط عمودية */
+    align-items: center; /* يوسّطهم في الوسط */
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: center; /* نصوص الروابط في الوسط */
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0; /* مسافة بين كل رابط وآخر */
+  }
+}
