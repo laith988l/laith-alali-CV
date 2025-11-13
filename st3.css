@@ -592,7 +592,7 @@ h1 {
 /* ترتيب الروابط عند فتح التوغل */
 @media (max-width: 768px) {
   .navbar-collapse {
-    display: flex !important;
+    display: flex ;
     flex-direction: column; /* يجعل الروابط عمودية */
     align-items: center; /* يوسّطهم في الوسط */
   }
@@ -606,3 +606,4 @@ h1 {
     margin: 10px 0; /* مسافة بين كل رابط وآخر */
   }
 }
+
